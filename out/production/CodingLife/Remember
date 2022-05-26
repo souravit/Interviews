@@ -1,0 +1,24 @@
+                                                String
+
+
+
+                                                HashMap
+            Iterating the HashMap
+            for(Map.Entry<Key, Value> map : (HashMap declared above).entrySet()){
+                System.out.print(map.getKey(), map.getValue());
+            }
+            ComputeIfAbsent
+            How to insert value + create  empty list in the HashMap eg HashMap<Integer, List<String>> map;
+            map.computeIfAbsent(key, x -> new ArrayList<String>()).add(Value)
+
+            To get only key count / number of keys
+            map.keySet();
+
+            How to reduce/ increase  the value in map
+            map.put(key, map.get(key) + 1); ---- increase value
+            map.put(key, map.get(key) - 1); ----decrease value
+
+            It is used to build for the frequency the number of times elements appear in the array
+            map.put(nums[i], getOrDefault(nums[i], 0) + 1);
+
+
