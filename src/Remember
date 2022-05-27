@@ -18,7 +18,10 @@
             map.put(key, map.get(key) + 1); ---- increase value
             map.put(key, map.get(key) - 1); ----decrease value
 
+            getOrDefault
             It is used to build for the frequency the number of times elements appear in the array
+            over here 0 means first time it will execute 1 will be placed against that number and second time it
+            place 2 against that number
             map.put(nums[i], getOrDefault(nums[i], 0) + 1);
 
 
