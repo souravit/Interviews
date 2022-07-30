@@ -4,18 +4,30 @@ import java.util.*;
 
 public class Practise1 {
     public static void main(String[] args) {
-        String s = "asadfgeg";
-        StringBuffer sb = new StringBuffer();
+        String s = "abb";
+        palin(s);
+
+    }
+
+    private static void palin(String s) {
+        HashMap<Character, Integer> map = new HashMap<>();
         char ch[] = s.toCharArray();
-
-        for(int i = 1; i < ch.length ; i++){
-
-            sb.append(ch[i] - ch[i-1]+"*");
+        for(int i = 0 ; i < s.length(); i++){
+            map.put(ch[i], map.getOrDefault(ch[i], 0)+1);
         }
-        System.out.println(sb.toString());
-//        char ch = 'A';
-//        int as = ch;
-//        System.out.println(as);
+        int count = 0 ;
+        boolean flag = true;
+        int max = 0;
+       for(Map.Entry<Character, Integer> value: map.entrySet()){
+           if(value.getValue()%2 == 0){
+               count +=value.getValue();
+           } else if (value.getValue() % 2 == 1) {
+                max = Math.max(max, value.getValue());
+           }
+       }
+       count +=max;
+        System.out.println(count);
+
     }
 }
 
